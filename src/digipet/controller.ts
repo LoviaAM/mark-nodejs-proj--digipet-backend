@@ -12,7 +12,10 @@ import {
  * These update the underlying digipet by using the functions defined in model.ts
  */
 
-export function feedDigipet(): void {}
+export function feedDigipet(): void {
+  updateDigipetBounded("nutrition", 10);
+  updateDigipetBounded("discipline", -5);
+}
 
 export function hatchDigipet(): Digipet {
   if (getDigipet()) {
@@ -25,7 +28,19 @@ export function hatchDigipet(): Digipet {
   }
 }
 
-export function trainDigipet(): void {}
+export function ignoreDigipet(): Digipet {
+    if (getDigipet())
+}
+
+export function trainDigipet(): void {
+//   const happiness = INITIAL_DIGIPET.happiness - 5
+//   const nutrition = INITIAL_DIGIPET.nutrition
+//   const discipline =  INITIAL_DIGIPET.discipline + 10
+  updateDigipetBounded("happiness", -5);
+  updateDigipetBounded("discipline", 10);
+}
+// };
+
 
 export function walkDigipet(): void {
   updateDigipetBounded("happiness", 10);
