@@ -50,7 +50,7 @@ export function setDigipet(newDigipet?: Digipet | undefined): void {
   _userDigipet = newDigipet ? { ...newDigipet } : undefined;
 }
 
-/**
+/*
  * Makes a bounded update to the user's digipet - increases and decreases up to a maximum of 100 and a minimum of 0
  *
  * @param digipetKey the digipet measure to update

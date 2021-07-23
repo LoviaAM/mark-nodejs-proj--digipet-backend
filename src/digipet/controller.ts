@@ -28,8 +28,11 @@ export function hatchDigipet(): Digipet {
   }
 }
 
-export function ignoreDigipet(): Digipet {
-    if (getDigipet())
+export function ignoreDigipet(): void {
+  updateDigipetBounded("happiness", -10)
+  updateDigipetBounded("nutrition", -10)
+  updateDigipetBounded("discipline", -10)
+    
 }
 
 export function trainDigipet(): void {
